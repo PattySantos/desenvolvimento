@@ -34,6 +34,7 @@ import {
    
     CoreModule.forRoot(),
     ThemeModule.forRoot(),
+    
   ],
   bootstrap: [AppComponent],
 })
