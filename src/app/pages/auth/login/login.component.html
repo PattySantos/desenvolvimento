@@ -1,89 +1,58 @@
-<h1 id="title" class="title">Login</h1>
+<div id="layoutAuthentication">
+  <div id="layoutAuthentication_content">
+      <main>
+          <div class="container">
+         
+              <div class="row justify-content-center">
+               
+                  <div class="col-lg-12 col-md-12">
+                      <div class="card shadow-lg border-0 rounded-lg mt-5">
+                          <div class="card-header">
+                            <div class="col-md-6 col-md-12 text-center">
+                              <img src="assets/images/logo-287x60-1.png" class="img-responsive  justify-content-center" alt="Transparência">
+                            </div>
+                              <h4 class="text-center front-weight-light my-4">
+                                  {{ cadastrando ? 'Cadastro de Novo Usuário' : 'Entrar'}}
+                              </h4>
+                          </div>
+                          <div class="card-body">
+                            <div class="alert alert-danger" *ngIf="loginError">
+                              Login e ou Senha incorreta
+                            </div>
+                            <form #loginForm="ngForm" (submit)="onSubmit();">
+                              <div class="form-group">
+                                <label class="small mb-1">Login</label>
+                                <input type="text" name="username"
+                                  [(ngModel)]="username" class="form-control py-4"
+                                  placeholder="Digite seu login" />
 
-<nb-alert *ngIf="showMessages.error && errors?.length && !submitted" outline="danger" role="alert">
-  <p class="alert-title"><b>Oh snap!</b></p>
-  <ul class="alert-message-list">
-    <li *ngFor="let error of errors" class="alert-message">{{ error }}</li>
-  </ul>
-</nb-alert>
+                              </div>
+                              <div class="form-group">
+                                <label class="small mb-1">Senha</label>
+                                <input type="text" name="password"
+                                  [(ngModel)]="password" class="form-control py-4"
+                                  placeholder="Digite sua senha" />
 
-<nb-alert *ngIf="showMessages.success && messages?.length && !submitted" outline="success" role="alert">
-  <p class="alert-title"><b>Hooray!</b></p>
-  <ul class="alert-message-list">
-    <li *ngFor="let message of messages" class="alert-message">{{ message }}</li>
-  </ul>
-</nb-alert>
+                              </div>
+                              <div class="form-group d-flex aalign-items-center justify-content-between mt-4 mb-0">
+                                <button type="submit" class="btn btn-primary" *ngIf="!cadastrando">Enviar</button>
+                                <button type="submit" class="btn btn-success" *ngIf="cadastrando">Cadastrar</button>
+                                <button type="submit" class="btn btn-danger ml-1" *ngIf="cadastrando" (click)="cancelarCadastrar()">Cancelar</button>
+                              </div>
+                            </form>
+                          </div>
+                          <div class="card-footer text-center">
+                            <div class="small">
+                              <a href="#"   (click)="preparaCadastrar($event)">
+                                Não possui usuário? Cadastre-se
+                              </a>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
 
-<form (ngSubmit)="login()" #form="ngForm" aria-labelledby="title">
-
-  <div class="form-control-group">
-    <label class="label" for="input-email">Email address:</label>
-    <input nbInput
-           fullWidth
-           [(ngModel)]="user.email"
-           #email="ngModel"
-           name="email"
-           id="input-email"
-           pattern=".+@.+\..+"
-           placeholder="Email address"
-           autofocus
-           [status]="email.dirty ? (email.invalid  ? 'danger' : 'success') : 'basic'"
-           [required]="getConfigValue('forms.validation.email.required')"
-           [attr.aria-invalid]="email.invalid && email.touched ? true : null">
-    <ng-container *ngIf="email.invalid && email.touched">
-      <p class="caption status-danger" *ngIf="email.errors?.required">
-        Email is required!
-      </p>
-      <p class="caption status-danger" *ngIf="email.errors?.pattern">
-        Email should be the real one!
-      </p>
-    </ng-container>
+              </div>
+          </div>
+      </main>
   </div>
-
-  <div class="form-control-group">
-    <label class="label" for="input-password">Password:</label>
-    <input nbInput
-           fullWidth
-           [(ngModel)]="user.password"
-           #password="ngModel"
-           name="password"
-           type="password"
-           id="input-password"
-           placeholder="Password"
-           [status]="password.dirty ? (password.invalid  ? 'danger' : 'success') : 'basic'"
-           [required]="getConfigValue('forms.validation.password.required')"
-           [minlength]="getConfigValue('forms.validation.password.minLength')"
-           [maxlength]="getConfigValue('forms.validation.password.maxLength')"
-           [attr.aria-invalid]="password.invalid && password.touched ? true : null">
-    <ng-container *ngIf="password.invalid && password.touched ">
-      <p class="caption status-danger" *ngIf="password.errors?.required">
-        Password is required!
-      </p>
-      <p class="caption status-danger" *ngIf="(password.errors?.minlength || password.errors?.maxlength)">
-        Password should contains
-        from {{ getConfigValue('forms.validation.password.minLength') }}
-        to {{ getConfigValue('forms.validation.password.maxLength') }}
-        characters
-      </p>
-    </ng-container>
-  </div>
-
-  <div class="form-control-group accept-group">
-    <nb-checkbox name="rememberMe" [(ngModel)]="user.rememberMe" *ngIf="rememberMe">Remember me</nb-checkbox>
-    <a class="forgot-password" routerLink="../request-password">Forgot Password?</a>
-  </div>
-
-  <button nbButton
-          fullWidth
-          status="success"
-          (submit)="onSubmit()"
-          [class.btn-pulse]="submitted">
-    Entrar
-  </button>
-</form>
-
-
-
-<section class="another-action" aria-label="Register">
-  Don't have an account? <a class="text-link" routerLink="../register">Sign Up</a>
-</section>
+</div>

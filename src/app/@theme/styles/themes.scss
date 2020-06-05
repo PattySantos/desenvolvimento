@@ -102,3 +102,8 @@ $nb-themes: nb-register-theme((
   max-width: 20rem;
   padding-left:10%!important;
 }
+/*Removente seta da tela de login*/
+.nb-theme-default nb-card-header {
+  display: none!important;
+  
+}
