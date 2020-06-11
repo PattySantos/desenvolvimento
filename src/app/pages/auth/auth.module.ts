@@ -1,9 +1,3 @@
-/**
- * @license
- * Copyright Akveo. All Rights Reserved.
- * Licensed under the MIT License. See License.txt in the project root for license information.
- */
-
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -15,6 +9,7 @@ import { NbAlertModule, NbButtonModule, NbCheckboxModule, NbInputModule } from '
 import { LoginComponent } from './login/login.component';
 
 
+
 @NgModule({
   imports: [
     CommonModule,
@@ -24,7 +19,6 @@ import { LoginComponent } from './login/login.component';
     NbButtonModule,
     NbCheckboxModule,
     AuthRoutingModule,
-
     NbAuthModule,
   ],
   declarations: [

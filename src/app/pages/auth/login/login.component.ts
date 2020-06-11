@@ -1,11 +1,9 @@
-/**
- * @license
- * Copyright Akveo. All Rights Reserved.
- * Licensed under the MIT License. See License.txt in the project root for license information.
- */
+
 import { Component } from '@angular/core';
 import { NbLoginComponent } from '@nebular/auth';
 import { Router } from '@angular/router';
+import { Usuario }from './Usuario';
+import { AuthService } from '../auth-service';
 
 @Component({
   selector: 'ngx-login',
@@ -17,9 +15,11 @@ export class LoginComponent {
   password:string;
   loginError: boolean;
   cadastrando:boolean;
+  mensagemSucesso:string;
   
   constructor(
-    private route: Router
+    private route: Router,
+    private authService: AuthService
   ){
 
   }
@@ -34,5 +34,19 @@ export class LoginComponent {
 
   cancelarCadastrar(){
     this.cadastrando = false;
+  }
+  cadastrar(){
+    const usuario: Usuario = new Usuario();
+    usuario.username = this.username;
+    usuario.password = this.password;
+      this.authService.salvar(usuario)
+      .subscribe( response => {
+        this.mensagemSucesso = "Cadastro realizado com sucesso! Efetue o login. "
+        this.loginError = false;
+
+      }, error =>{
+        this.loginError = true;
+        this.mensagemSucesso =  null
+      })
   }
 }
