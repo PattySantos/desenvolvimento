@@ -1,78 +1,39 @@
 <div id="layoutAuthentication">
   <div id="layoutAuthentication_content">
-      <main>
-          <div class="container">
-         
-              <div class="row justify-content-center">
-               
-                  <div class="col-lg-12 col-md-12">
-                      <div class="card shadow-lg border-0 rounded-lg mt-5">
-                          <div class="card-header">
-                            <div class="col-md-6 col-md-12 text-center">
-                              <img src="assets/images/transparencia-logo.png" class="img-responsive  justify-content-center" alt="Transparência">
-                              <h4 class="text-center front-weight-light my-4">
-                                {{ cadastrando ? 'Cadastro de Novo Usuário' : 'Entrar'}}
-                              </h4>
-                            </div>
-                             
-                          </div>
-                          <div class="card-body">
-                            <div class="alert alert-danger" *ngIf="loginError">
-                              Login e ou Senha incorreta
-                            </div>
-      
-                            <form #loginForm="ngForm" (submit)="onSubmit();">
-                              <div class="form-group">
-                                <label class="small mb-1">Login</label>
-                                <input type="text" name="username"
-                                  [(ngModel)]="username" class="form-control py-4"
-                                  placeholder="Digite seu login" />
 
-                              </div>
-                              <div class="form-group">
-                                <label class="small mb-1">Senha</label>
-                                <input type="text" name="password"
-                                  [(ngModel)]="password" class="form-control py-4"
-                                  placeholder="Digite sua senha" />
+    <div class="container">
+      <div class="row justify-content-center">
+        <nb-card>
+          <nb-card-body>
+            <p class="text-center">
+              <img src="assets/images/transparencia-logo.png" class="img-responsive " alt="Transpar�ncia">
+            </p>
 
-                              </div>
-                              <div class="form-group" *ngIf="cadastrando">
-                                <label class="small mb-1">Email</label>
-                                <input type="text" name="email"
-                                  [(ngModel)]="email" class="form-control py-4"
-                                  placeholder="Digite seu email" />
+            <h5 class="text-center front-weight-light my-4">
+              {{ cadastrando ? 'Cadastro de Novo Usu�rio' : 'Entrar'}}
+            </h5>
+            <div class="form-group">
 
-                              </div>
-                              <div class="form-group d-flex aalign-items-center justify-content-between mt-4 mb-0">
-                                <button type="submit" class="btn btn-primary" *ngIf="!cadastrando">Entrar
+              <label>Login</label>
+              <input type="text" name="username" nbInput fullWidth [(ngModel)]="username" class="form-control py-4"
+                placeholder="Digite seu login" />
+            </div>
+            <div class="form-group">
+              <label>Senha</label>
+              <input type="text" name="password" nbInput fullWidth [(ngModel)]="password" class="form-control py-4"
+                placeholder="Digite sua senha" />
 
-                                </button>
+            </div>
 
-                                <button type="button" class="btn btn-success" 
-                                  (click)="cadastrar()"
-                                  *ngIf="cadastrando">Cadastrar
-                                  
+            <div class="form-group d-flex aalign-items-center justify-content-between mt-4 mb-0">
+              <button type="submit" nbButton fullWidth status="success" (click)="onSubmit()">login
+              </button>
+            </div>
+          </nb-card-body>
 
-                                </button>
+        </nb-card>
+      </div>
+    </div>
 
-                                <button type="button" class="btn btn-danger ml-1" *ngIf="cadastrando" (click)="cancelarCadastrar()">Cancelar
-
-                                </button>
-                              </div>
-                            </form>
-                          </div>
-                          <div class="card-footer text-center">
-                            <div class="small">
-                              <a href="#"   (click)="preparaCadastrar($event)">
-                                Não possui usuário? Cadastre-se
-                              </a>
-                            </div>
-                          </div>
-                      </div>
-                  </div>
-
-              </div>
-          </div>
-      </main>
   </div>
 </div>

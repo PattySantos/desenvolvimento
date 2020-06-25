@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AuthRoutingModule } from './auth-routing.module';
 import { NbAuthModule } from '@nebular/auth';
-import { NbAlertModule, NbButtonModule, NbCheckboxModule, NbInputModule } from '@nebular/theme';
+import { NbAlertModule, NbButtonModule, NbCheckboxModule, NbInputModule, NbCardModule } from '@nebular/theme';
 
 import { LoginComponent } from './login/login.component';
 
@@ -17,6 +17,7 @@ import { LoginComponent } from './login/login.component';
     NbAlertModule,
     NbInputModule,
     NbButtonModule,
+    NbCardModule,
     NbCheckboxModule,
     AuthRoutingModule,
     NbAuthModule,
