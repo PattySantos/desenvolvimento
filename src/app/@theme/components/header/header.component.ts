@@ -78,6 +78,11 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   changeTheme(themeName: string) {
     this.themeService.changeTheme(themeName);
+    if(themeName == 'dark' || themeName == 'cosmic'){
+       document.getElementById('logo-cabecalho').setAttribute('src','assets/images/logo-cabecalho-branca.png')
+    }else{
+      document.getElementById('logo-cabecalho').setAttribute('src','assets/images/logo-cabecalho.png')
+    }
   }
 
   toggleSidebar(): boolean {
