@@ -1,6 +1,23 @@
 import { NbMenuItem } from '@nebular/theme';
 
 export const MENU_ITEMS: NbMenuItem[] = [
+
+  {
+    title: 'Cadastros',
+    icon: 'layout-outline',
+    children: [
+      
+      {
+        title: 'Clientes',
+        link: '/pages/cadastros/clientes',
+      },
+      {
+        title: 'Fornecedores',
+        link: '/pages/cadastros/fornecedor',
+      }
+      
+    ],
+  },
  
   
   {
