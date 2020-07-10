@@ -28,6 +28,11 @@ const routes: Routes = [{
         .then(m => m.CadastrosModule),
     },
     {
+      path: 'comercial',
+      loadChildren: () => import('./comercial/comercial.module')
+        .then(m => m.ComercialModule),
+    },
+    {
       path: 'forms',
       loadChildren: () => import('./forms/forms.module')
         .then(m => m.FormsModule),

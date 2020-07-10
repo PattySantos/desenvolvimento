@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ClientesRoutingModule } from './clientes-routing.module';
-import { ClientesDetailComponent } from './clientes-detail.component';
+import { EcommerceRoutingModule } from './ecommerce-routing.module';
+import { EcommerceDetailComponent } from './ecommerce-detail.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ThemeModule } from '../../../@theme/theme.module';
 import { NbTabsetModule, NbRouteTabsetModule, NbStepperModule, NbCardModule, NbButtonModule, NbInputModule, NbSelectModule, NbListModule, NbAccordionModule, NbUserModule, NbTreeGridModule } from '@nebular/theme';
-import { ClientesListComponent } from './clientes-list.component';
+import { EcommerceListComponent } from './ecommerce-list.component';
 
 
 @NgModule({
@@ -27,11 +27,11 @@ import { ClientesListComponent } from './clientes-list.component';
     NbListModule,
     NbAccordionModule,
     NbUserModule,
-    ClientesRoutingModule
+    EcommerceRoutingModule
   ],
   declarations: [
-    ClientesDetailComponent, 
-    ClientesListComponent
+    EcommerceDetailComponent, 
+    EcommerceListComponent
   ],
 })
-export class ClientesModule { }
+export class EcommerceModule { }

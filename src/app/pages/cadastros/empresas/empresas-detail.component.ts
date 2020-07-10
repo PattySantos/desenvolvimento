@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { ClientesModel } from './clientes.model';
+import { EmpresasModel } from './empresas.model';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'ngx-clientes-detail',
-  templateUrl: './clientes-detail.component.html',
-  styleUrls: ['./clientes.component.scss']
+  selector: 'ngx-empresas-detail',
+  templateUrl: './empresas-detail.component.html',
+  styleUrls: ['./empresas.component.scss']
 })
-export class ClientesDetailComponent implements OnInit {
+export class EmpresasDetailComponent implements OnInit {
 
-  cliente: ClientesModel;
-  clientesForm: FormGroup;
+  empresa: EmpresasModel;
+  empresasForm: FormGroup;
 
   constructor(
     public fb: FormBuilder,
@@ -23,11 +23,11 @@ export class ClientesDetailComponent implements OnInit {
   }
   
   public back() {
-    this._router.navigate(['/pages/cadastros/clientes/']);
+    this._router.navigate(['/pages/cadastros/empresas/']);
 }
   onValueChanged(data?: any) {
-    if (!this.clientesForm) { return; }
-    const form = this.clientesForm;
+    if (!this.empresasForm) { return; }
+    const form = this.empresasForm;
 
     for (const field in this.formErrors) {
         this.formErrors[field] = '';
@@ -43,21 +43,16 @@ export class ClientesDetailComponent implements OnInit {
 }
   
   buildForm(): void {
-    this.clientesForm = this.fb.group({
+    this.empresasForm = this.fb.group({
         'id': [''],
-        'idTenant': [''],
-        'nomeFantasia': [''],
-        'razaoSocial': [''],
+        'nome': [''],
         'cpf': [''],
-        'inscricaoMunicipal': [''],
-        'inscricaoEstadual': [''],
         'dataCadastro': [''],
-        'tipoPessoa':['']
 
        
 
     });
-    this.clientesForm.valueChanges.subscribe(data => this.onValueChanged(data));
+    this.empresasForm.valueChanges.subscribe(data => this.onValueChanged(data));
     this.onValueChanged();
 }
 

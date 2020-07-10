@@ -103,11 +103,7 @@ $nb-themes: nb-register-theme((
   max-width: 20rem;
   padding-left:15%!important;
 }
-/*Removente seta da tela de login*/
-.nb-theme-default nb-card-header {
-  display: none!important;
-  
-}
+
 /*Centralizar logo no cabecalho*/
 .nb-theme-default p, .nb-theme-default .paragraph {
   color: #222b45;

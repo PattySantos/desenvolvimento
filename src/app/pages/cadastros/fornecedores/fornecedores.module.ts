@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ClientesRoutingModule } from './clientes-routing.module';
-import { ClientesDetailComponent } from './clientes-detail.component';
+import { FornecedoresRoutingModule } from './fornecedores-routing.module';
+import { FornecedoresDetailComponent } from './fornecedores-detail.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ThemeModule } from '../../../@theme/theme.module';
-import { NbTabsetModule, NbRouteTabsetModule, NbStepperModule, NbCardModule, NbButtonModule, NbInputModule, NbSelectModule, NbListModule, NbAccordionModule, NbUserModule, NbTreeGridModule } from '@nebular/theme';
-import { ClientesListComponent } from './clientes-list.component';
+import { NbTabsetModule, NbRouteTabsetModule, NbStepperModule, NbCardModule, NbButtonModule, NbInputModule, NbSelectModule, NbListModule, NbAccordionModule, NbUserModule } from '@nebular/theme';
+import { FornecedoresListComponent } from './fornecedores-list.component';
 
 
 @NgModule({
@@ -22,16 +22,15 @@ import { ClientesListComponent } from './clientes-list.component';
     NbCardModule,
     NbButtonModule,
     NbInputModule,
-    NbTreeGridModule,
     NbSelectModule,
     NbListModule,
     NbAccordionModule,
     NbUserModule,
-    ClientesRoutingModule
+    FornecedoresRoutingModule
   ],
   declarations: [
-    ClientesDetailComponent, 
-    ClientesListComponent
+    FornecedoresDetailComponent, 
+    FornecedoresListComponent
   ],
 })
-export class ClientesModule { }
+export class FornecedoresModule { }

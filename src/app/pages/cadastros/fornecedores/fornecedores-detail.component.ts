@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { ClientesModel } from './clientes.model';
+import {  FornecedoresModel } from './fornecedores.model';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'ngx-clientes-detail',
-  templateUrl: './clientes-detail.component.html',
-  styleUrls: ['./clientes.component.scss']
+  selector: 'ngx-fornecedores-detail',
+  templateUrl: './fornecedores-detail.component.html',
+  styleUrls: ['./fornecedores.component.scss']
 })
-export class ClientesDetailComponent implements OnInit {
+export class FornecedoresDetailComponent implements OnInit {
 
-  cliente: ClientesModel;
-  clientesForm: FormGroup;
+  fornecedor: FornecedoresModel;
+ fornecedorForm: FormGroup;
 
   constructor(
     public fb: FormBuilder,
@@ -23,11 +23,11 @@ export class ClientesDetailComponent implements OnInit {
   }
   
   public back() {
-    this._router.navigate(['/pages/cadastros/clientes/']);
+    this._router.navigate(['/pages/cadastros/fornecedores/']);
 }
   onValueChanged(data?: any) {
-    if (!this.clientesForm) { return; }
-    const form = this.clientesForm;
+    if (!this.fornecedorForm) { return; }
+    const form = this.fornecedorForm;
 
     for (const field in this.formErrors) {
         this.formErrors[field] = '';
@@ -43,21 +43,16 @@ export class ClientesDetailComponent implements OnInit {
 }
   
   buildForm(): void {
-    this.clientesForm = this.fb.group({
+    this.fornecedorForm = this.fb.group({
         'id': [''],
-        'idTenant': [''],
-        'nomeFantasia': [''],
-        'razaoSocial': [''],
+        'nome': [''],
         'cpf': [''],
-        'inscricaoMunicipal': [''],
-        'inscricaoEstadual': [''],
         'dataCadastro': [''],
-        'tipoPessoa':['']
 
        
 
     });
-    this.clientesForm.valueChanges.subscribe(data => this.onValueChanged(data));
+    this.fornecedorForm.valueChanges.subscribe(data => this.onValueChanged(data));
     this.onValueChanged();
 }
 

@@ -6,6 +6,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
     title: 'Cadastros',
     icon: 'layout-outline',
     children: [
+      {
+        title: 'Empresas',
+        link: '/pages/cadastros/empresas',
+      },
       
       {
         title: 'Clientes',
@@ -13,12 +17,35 @@ export const MENU_ITEMS: NbMenuItem[] = [
       },
       {
         title: 'Fornecedores',
-        link: '/pages/cadastros/fornecedor',
+        link: '/pages/cadastros/fornecedores',
+      },
+      {
+        title: 'Produtos',
+        link: '/pages/cadastros/produtos',
       }
       
     ],
   },
- 
+  {
+    title: 'Comercial',
+    icon: 'shopping-cart-outline',
+    children: [
+      {
+        title: 'CRM',
+        link: '/pages/comercial/crm',
+      },
+      
+      {
+        title: 'Cotação Elêtrônica',
+        link: '/pages/comercial/cotacao',
+      },
+
+      {
+        title: 'E-commerce',
+        link: '/pages/comercial/ecommerce',
+      },
+    ],
+  },
   
   {
     title: 'Layout',

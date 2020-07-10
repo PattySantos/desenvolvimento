@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ClientesModel } from './clientes.model';
+import { ClientesService } from './clientes.service';
 
 @Component({
   selector: 'ngx-clientes-list',
@@ -8,8 +10,11 @@ import { Router } from '@angular/router';
 })
 export class ClientesListComponent implements OnInit {
 
+  clientes:ClientesModel[];
+
   constructor(
-    private _router: Router
+    private _router: Router,
+    private _service: ClientesService
   ) { }
 
   ngOnInit() {

@@ -1,17 +1,17 @@
-<nb-card>
+<nb-card class="col-md-12">
     <nb-card-header>Clientes</nb-card-header>
     <nb-card-body>
       <div class="container col-md-12">
         <form>
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-2">
               <div class="form-group ">
-                <label class="label col-sm-4 col-form-label">Id</label>
+                <label class="label col-sm-6 col-form-label">Código</label>
                 <input type="text" nbInput fullWidth fieldSize="small" />
   
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-4">
               <div class="form-group ">
                 <label class="label col-sm-6 col-form-label">Data Cadastro</label>
                 <input type="text" nbInput fullWidth fieldSize="small"  />
@@ -20,32 +20,131 @@
             </div>
          
             
-            <div class="col-md-4">
+            <div class="col-md-6">
               <div class="form-group ">
-                <label class="label col-sm-4 col-form-label">CPF/CNPJ</label>
+                <label class="label col-sm-6 col-form-label">CPF/CNPJ</label>
                 <input type="text" nbInput fullWidth fieldSize="small"  />
   
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-6">
               <div class="form-group ">
                 <label class="label col-sm-6 col-form-label">Nome Fantasia</label>
                 <input type="text" nbInput fullWidth fieldSize="small" />
   
               </div>
             </div>
+            <div class="col-md-6">
+              <div class="form-group ">
+                <label class="label col-sm-6 col-form-label">Razão Social</label>
+                <input type="text" nbInput fullWidth fieldSize="small" />
+  
+              </div>
+            </div>
             <div class="col-md-4">
               <div class="form-group ">
-              
+                <label class="label col-sm-6 col-form-label">E-mail</label>
+                <input type="email" nbInput fullWidth fieldSize="small" />
+  
               </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group ">
+                <label class="label col-sm-6 col-form-label">Telefone</label>
+                <input type="text" nbInput fullWidth fieldSize="small" />
+  
+              </div>
+            </div>
+            
+            <div class="col-md-4">
+              <div class="form-group ">
+                <label class="label col-sm-6 col-form-label">Inscrição Estadual</label>
+                <input type="text" nbInput fullWidth fieldSize="small" />
+  
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group ">
+                <label class="label col-sm-6 col-form-label">Inscrição Municipal</label>
+                <input type="text" nbInput fullWidth fieldSize="small" />
+  
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label class="label col-sm-6 col-form-label">Contribuinte</label>
        
               <div class="form-group ">
-                <nb-select class="nb-select-transparencia col-sm-12"  style="padding-top:12px; padding-right:17%; height:35px!important" fullWidth placeholder="Pessoa Física ou Jurídica" status="basic">
+               
+                <nb-select class="nb-select-transparencia col-sm-12"  fullWidth placeholder="Contribuinte" status="basic">
+                  <nb-option value="1">Sim</nb-option>
+                  <nb-option value="2">Não</nb-option>
+                </nb-select>
+            </div>
+          </div>
+            <div class="col-md-4">
+              <label class="label col-sm-6 col-form-label">Tipo Pessoa</label>
+       
+              <div class="form-group ">
+               
+                <nb-select class="nb-select-transparencia col-sm-12"  fullWidth placeholder="Pessoa Física ou Jurídica" status="basic">
                   <nb-option value="1">Física</nb-option>
                   <nb-option value="2">Jurídica</nb-option>
                 </nb-select>
             </div>
           </div>
+        
+            <nb-card-header  class="col-md-12">Endereço</nb-card-header>
+          
+             
+              <div class="col-md-4">
+                <div class="form-group ">
+                  <label class="label col-sm-6 col-form-label">Cep</label>
+                  <input type="text" nbInput fullWidth fieldSize="small" />
+    
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group ">
+                  <label class="label col-sm-6 col-form-label">Logradouro</label>
+                  <input type="text" nbInput fullWidth fieldSize="small" />
+    
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="form-group ">
+                  <label class="label col-sm-6 col-form-label">Número</label>
+                  <input type="text" nbInput fullWidth fieldSize="small" />
+    
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group ">
+                  <label class="label col-sm-6 col-form-label">Complemento</label>
+                  <input type="text" nbInput fullWidth fieldSize="small" />
+    
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group ">
+                  <label class="label col-sm-6 col-form-label">Bairro</label>
+                  <input type="text" nbInput fullWidth fieldSize="small" />
+    
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group ">
+                  <label class="label col-sm-6 col-form-label">Cidade</label>
+                  <input type="text" nbInput fullWidth fieldSize="small" />
+    
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="form-group ">
+                  <label class="label col-sm-6 col-form-label">Uf</label>
+                  <input type="text" nbInput fullWidth fieldSize="small" />
+    
+                </div>
+              </div>
            
           </div>
         </form>
