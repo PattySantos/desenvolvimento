@@ -46,6 +46,104 @@ export const MENU_ITEMS: NbMenuItem[] = [
       },
     ],
   },
+  {
+    title: 'Financeiro',
+    icon: 'credit-card-outline',
+    children: [
+      {
+        title: 'Contas a Pagar',
+        link: '/pages/financeiro/contas-pagar',
+      },
+      
+      {
+        title: 'Contas a Receber',
+        link: '/pages/financeiro/contas-receber',
+      },
+           
+      {
+        title: 'Fluxo de Caixa',
+        link: '/pages/financeiro/fluxo-caixa',
+      },
+
+      {
+        title: 'Ciclo Financeiro Operacional',
+        link: '/pages/financeiro/ciclo-financeiro',
+      },
+      {
+        title: 'Margem de Contribuição ',
+        link: '/pages/financeiro/margem-contribuicao',
+      },
+      {
+        title: 'Controle de Inadimplência ',
+        link: '/pages/financeiro/controle-inadimplencia',
+      },
+      {
+        title: 'Ponto de Equilíbrio ',
+        link: '/pages/financeiro/ponto-equilibrio',
+      },
+     
+    ],
+  },
+  {
+    title: 'Contabilidade',
+    icon: 'layers-outline',
+    children: [
+      {
+        title: 'Documentos',
+        link: '/pages/contabilidade/documentos',
+      },
+      {
+        title: 'Falar com a Contabilidade',
+        link: '/pages/contabilidade/falar-contabilidade',
+      },
+      
+     
+    ],
+  },
+  {
+    title: 'Pessoas',
+    icon: 'person-outline',
+    children: [
+      {
+        title: 'Folha de Pagamento',
+        link: '/pages/pessoas/folha-pagamento',
+      },
+      {
+        title: 'Recrutamento e Seleção',
+        link: '/pages/pessoas/recrutamento',
+      },
+      {
+        title: 'Automação - Ponto Eletrônico',
+        link: '/pages/pessoas/automacao-ponto',
+      },
+      {
+        title: 'Banco de Currículos',
+        link: '/pages/pessoas/banco-curriculo',
+      },
+    ],
+  },
+  {
+    title: 'Consultoria',
+    icon: 'smiling-face-outline',
+    children: [
+      {
+        title: 'Planejamento',
+        link: '/pages/consultoria/consultoria',
+      },
+      {
+        title: 'Mercado',
+        link: '/pages/consultoria/mercado',
+      },
+      {
+        title: 'Organização',
+        link: '/pages/organizacao/organizacao',
+      },
+      {
+        title: 'Finanças',
+        link: '/pages/financas/financas',
+      },
+    ],
+  },
   
   {
     title: 'Layout',

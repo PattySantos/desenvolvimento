@@ -33,6 +33,26 @@ const routes: Routes = [{
         .then(m => m.ComercialModule),
     },
     {
+      path: 'financeiro',
+      loadChildren: () => import('./financeiro/financeiro.module')
+        .then(m => m.FinanceiroModule),
+    },
+    {
+      path: 'contabilidade',
+      loadChildren: () => import('./contabilidade/contabilidade.module')
+        .then(m => m.ContabilidadeModule),
+    },
+    {
+      path: 'pessoas',
+      loadChildren: () => import('./pessoas/pessoas.module')
+        .then(m => m.PessoasModule),
+    },
+    {
+      path: 'consultoria',
+      loadChildren: () => import('./consultoria/consultoria.module')
+        .then(m => m.ConsultoriaModule),
+    },
+    {
       path: 'forms',
       loadChildren: () => import('./forms/forms.module')
         .then(m => m.FormsModule),
