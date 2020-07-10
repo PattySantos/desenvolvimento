@@ -45,9 +45,14 @@ export class ClientesDetailComponent implements OnInit {
   buildForm(): void {
     this.clientesForm = this.fb.group({
         'id': [''],
-        'nome': [''],
+        'idTenant': [''],
+        'nomeFantasia': [''],
+        'razaoSocial': [''],
         'cpf': [''],
+        'inscricaoMunicipal': [''],
+        'inscricaoEstadual': [''],
         'dataCadastro': [''],
+        'tipoPessoa':['']
 
        
 
